@@ -1,0 +1,130 @@
+<ion-content>
+  <!-- Header -->
+  <app-header></app-header>
+  <!-- SearchBar -->
+  <ion-searchbar class="searchbar center" placeholder="Search Pokémon" (ionChange)="filterList($event)" debounce="1000">
+  </ion-searchbar>
+
+  <!-- Card List -->
+  <div *ngIf="listPoke && listPoke.length == 0 && !isSkeleton" class="center not-found"> No results</div>
+
+  <!-- Skeleton -->
+  <div *ngIf="isSkeleton">
+    <div class="ion-margin-horizontal segment-content" *ngIf="!isFilter">Emphasis</div>
+    <ion-grid class="ion-margin-horizontal" style="margin-top: -20px;" *ngIf="!isFilter">
+      <ion-row>
+        <ion-col size="12">
+          <ion-skeleton-text animated style="width: 100%;  height: 140px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <div class="ion-margin-horizontal segment-content">{{titleSegment}}</div>
+
+    <ion-grid class="ion-margin-horizontal" style="margin-top: -20px;">
+      <ion-row>
+        <ion-col size="6">
+          <ion-skeleton-text animated style="width: 100%;  height: 140px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+        <ion-col size="6">
+          <ion-skeleton-text animated style="width: 100%;  height: 140px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-skeleton-text animated style="width: 100%;  height: 140px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+        <ion-col size="6">
+          <ion-skeleton-text animated style="width: 100%;  height: 140px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-skeleton-text animated style="width: 100%;  height: 140px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+        <ion-col size="6">
+          <ion-skeleton-text animated style="width: 100%;  height: 140px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-skeleton-text animated style="width: 100%;  height: 140px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+        <ion-col size="6">
+          <ion-skeleton-text animated style="width: 100%;  height: 140px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-skeleton-text animated style="width: 100%;  height: 140px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+        <ion-col size="6">
+          <ion-skeleton-text animated style="width: 100%;  height: 140px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <!-- content -->
+  <div *ngIf="listPoke && listPoke.length > 0 && !isSkeleton">
+    <div class="ion-margin-horizontal segment-content" *ngIf="!isFilter">Emphasis</div>
+    <ion-grid class="ion-margin-horizontal" style="margin-top: -20px;" *ngIf="!isFilter">
+      <ion-row>
+        <ion-col *ngFor="let itens of emphasis; let i = index" size="12" >
+          <div class="card-list type-outher-bg">
+            <div class="center" routerLink="/detail-poke"
+            [state]="{itens:itens}">
+              <img class="img-poke"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{itens?.info?.id}}.png"
+                onerror="this.onerror=null;this.src='https://www.montandominhafesta.com.br/wp-content/uploads/2020/06/fundo_transparente-montando-minha-festa.png';"
+                width="192" height="auto">
+            </div>
+            <div class="center tittle-poke">{{itens.name}}</div>
+            <div class="center sub-tittle-poke">#{{itens?.info?.id}}</div>
+            <div class="card-list-name center">
+              <ion-icon class="icon-list-name" name="heart" (click)="addFavorite(itens)"></ion-icon>
+              <ion-icon class="icon-list-name" name="information-circle" routerLink="/detail-poke"
+              [state]="{itens:itens}"></ion-icon>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+
+    <div class="ion-margin-horizontal segment-content">{{titleSegment}}</div>
+
+    <ion-grid class="ion-margin-horizontal" style="margin-top: -20px;">
+      <ion-row>
+        <ion-col *ngFor="let itens of listPoke; let i = index" size="6" >
+          <div class="card-list type-{{itens?.info?.types[0]?.type?.name}}-bg">
+            <div class="center" routerLink="/detail-poke"
+            [state]="{itens:itens}">
+              <img class="img-poke"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{itens?.info?.id}}.png"
+                onerror="this.onerror=null;this.src='https://www.montandominhafesta.com.br/wp-content/uploads/2020/06/fundo_transparente-montando-minha-festa.png';"
+                width="192" height="auto">
+            </div>
+            <div class="center tittle-poke">{{itens.name}}</div>
+            <div class="center sub-tittle-poke">#{{itens?.info?.id}} </div>
+            <div class="card-list-name center">
+              <ion-icon class="icon-list-name" name="heart" (click)="addFavorite(itens)"></ion-icon>
+              <ion-icon class="icon-list-name" name="information-circle" routerLink="/detail-poke"
+              [state]="{itens:itens}"></ion-icon>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <!-- Infinite Scroll -->
+  <ion-infinite-scroll threshold="0px" (ionInfinite)="infiniteScrool($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
+
+<ion-footer style="padding:10px; background-color: transparent;">
+  <!-- Tabs -->
+  <app-tabs></app-tabs>
+</ion-footer>

@@ -1,0 +1,33 @@
+<div class="content-tabs"
+routerLink="/favorite">
+<div class="tabs center">
+    <ion-grid >
+        <ion-row>
+            <ion-col size="4" (click)="router('/home')">
+                <ion-row>
+                    <ion-icon class="icon center" name="{{utils.menuHome}}"></ion-icon>
+                </ion-row>
+                <ion-row>
+                    <span class="title-menu center">Home</span>
+                </ion-row>
+            </ion-col>
+            <ion-col size="4" (click)="router('/type-poke')">
+                <ion-row>
+                    <ion-icon class="icon center" name="{{utils.menuType}}"></ion-icon>
+                </ion-row>
+                <ion-row>
+                    <span class="title-menu center">Type</span>
+                </ion-row>
+            </ion-col>
+            <ion-col size="4" (click)="router('/favorite')">
+                <ion-row>
+                    <ion-icon class="icon center" name="{{utils.menuFavorite}}"></ion-icon>
+                </ion-row>
+                <ion-row>
+                    <span class="title-menu center">Favorite</span>
+                </ion-row>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</div>
+</div>

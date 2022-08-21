@@ -1,0 +1,433 @@
+.header {
+  ion-grid {
+    margin-top: 18px;
+    ion-row {
+      ion-col {
+        ion-icon {
+          font-size: 26px;
+          color: #ffffff;
+        }
+        .title-header {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          color: #ffffff;
+        }
+        .number-header {
+          margin-top: 6px;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+.searchbar {
+  --background: #e5e5e5 !important;
+  --border-radius: 30px !important;
+  height: 42px !important;
+  background: #e5e5e5;
+  border-radius: 30px;
+  width: 90%;
+  margin-top: 20px;
+}
+
+.result-content-type {
+  padding-top: 40px;
+  ion-grid {
+    ion-row {
+      ion-col {
+        padding-top: 90px;
+        .card-list {
+          border-radius: 20px;
+          width: 100%;
+          height: 140px;
+          .tittle-poke {
+            font-weight: 800;
+            font-size: 16px;
+            color: #000000;
+            margin-top: -10px;
+          }
+          .sub-tittle-poke {
+            font-weight: 800;
+            font-size: 12px;
+            color: #000000;
+          }
+          .card-list-name {
+            background: #676767;
+            box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.1), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0718854),
+              0px 22.3363px 17.869px rgba(0, 0, 0, 0.0596107), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.05),
+              0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0403893), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0281146);
+            border-radius: 10px;
+            width: 90%;
+            padding: 2px;
+            .icon-list-name {
+              font-size: 26px;
+              color: #ffffff;
+              padding: 0px 10px 0px 10px;
+            }
+          }
+        }
+        .img-poke {
+          margin-top: -90px;
+        }
+      }
+    }
+  }
+}
+
+.content-info-poke {
+  background: #ffffff;
+  border-radius: 8px;
+
+  margin-top: -70px;
+  .bg-type {
+    border-radius: 10px;
+    width: 100%;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 5px;
+    margin-top: 60px;
+  }
+
+  .title-segment {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    margin-top: 20px;
+  }
+  .info-poke-detail {
+    margin-top: 20px;
+    .title {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      color: #212121;
+    }
+    .sub-title {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      color: #666666;
+    }
+    .message {
+      margin-top: 20px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      color: #212121;
+    }
+  }
+  .base-stats {
+    margin-top: 20px;
+    .name-stats {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 12px;
+    }
+  }
+}
+
+.bg-type-thow {
+  border-radius: 10px;
+  width: 100%;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 5px;
+  margin-top: 20px;
+}
+
+ion-progress-bar {
+  height: 10px;
+  border-radius: 10px;
+  --background: #e0e0e0;
+}
+
+/* Styles type Poke's */
+.type-default-bg {
+  background: #ffffff;
+  --background: #ffffff;
+}
+
+.type-outher-bg {
+  background: #263c66;
+  --background: #263c66;
+}
+
+.type-outher-tx {
+  color: #263c66;
+}
+
+.type-normal-bg {
+  background: linear-gradient(55.56deg, #fc7cff 0%, #fa5afd 100%);
+  --background: linear-gradient(55.56deg, #fc7cff 0%, #fa5afd 100%);
+}
+
+.type-normal-tx {
+  color: #fc7cff;
+}
+
+.type-fighting-bg {
+  background: linear-gradient(55.56deg, #005cfe 0%, #0355e2 100%);
+  --background: linear-gradient(55.56deg, #005cfe 0%, #0355e2 100%);
+}
+
+.type-fighting-tx {
+  color: #005cfe;
+}
+
+.type-flying-bg {
+  background: linear-gradient(55.56deg, #507dfc 0%, #2760fc 100%);
+  --background: linear-gradient(55.56deg, #507dfc 0%, #2760fc 100%);
+}
+
+.type-flying-tx {
+  color: #507dfc;
+}
+
+.type-poison-bg {
+  background: linear-gradient(55.56deg, #b622b6 0%, #861986 100%);
+  --background: linear-gradient(55.56deg, #b622b6 0%, #861986 100%);
+}
+
+.type-poison-tx {
+  color: #b622b6;
+}
+
+.type-ground-bg {
+  background: linear-gradient(55.56deg, #553636 0%, #442727 100%);
+  --background: linear-gradient(55.56deg, #553636 0%, #442727 100%);
+}
+
+.type-ground-tx {
+  color: #553636;
+}
+
+.type-rock-bg {
+  background: linear-gradient(55.56deg, #e6880f 0%, #cc790d 100%);
+  --background: linear-gradient(55.56deg, #e6880f 0%, #cc790d 100%);
+}
+
+.type-rock-tx {
+  color: #e6880f;
+}
+
+.type-bug-bg {
+  background: linear-gradient(55.56deg, #ffb324 0%, rgb(158, 158, 2) 100%);
+  --background: linear-gradient(55.56deg, #ffb324 0%, rgb(158, 158, 2) 100%);
+}
+
+.type-bug-tx {
+  color: #ffb324;
+}
+
+.type-ghost-bg {
+  background: linear-gradient(55.56deg, #02947b 0%, #027562 100%);
+  --background: linear-gradient(55.56deg, #02947b 0%, #027562 100%);
+}
+
+.type-ghost-tx {
+  color: #02947b;
+}
+
+.type-steel-bg {
+  background: linear-gradient(55.56deg, #c4c4c4 0%, #a5a5a5 100%);
+  --background: linear-gradient(55.56deg, #c4c4c4 0%, #a5a5a5 100%);
+}
+
+.type-steel-tx {
+  color: #c4c4c4;
+}
+
+.type-fire-bg {
+  background: linear-gradient(55.56deg, #ff0100 0%, #e90202 100%);
+  --background: linear-gradient(55.56deg, #ff0100 0%, #e90202 100%);
+}
+
+.type-fire-tx {
+  color: #ff0100;
+}
+
+.type-water-bg {
+  background: linear-gradient(55.56deg, #71a1f5 0%, #5579b8 100%);
+  --background: linear-gradient(55.56deg, #71a1f5 0%, #5579b8 100%);
+}
+
+.type-water-tx {
+  color: #71a1f5;
+}
+
+.type-grass-bg {
+  background: linear-gradient(55.56deg, #02947b 0%, #027562 100%);
+  --background: linear-gradient(55.56deg, #02947b 0%, #027562 100%);
+}
+
+.type-grass-tx {
+  color: #02947b;
+}
+
+.type-electric-bg {
+  background: linear-gradient(55.56deg, #9b9b47 0%, #797937 100%);
+  --background: linear-gradient(55.56deg, #9b9b47 0%, #797937 100%);
+}
+
+.type-electric-tx {
+  color: #9b9b47;
+}
+
+.type-psychic-bg {
+  background: linear-gradient(55.56deg, #7d0ea9 0%, #670c8b 100%);
+  --background: linear-gradient(55.56deg, #7d0ea9 0%, #670c8b 100%);
+}
+
+.type-psychic-tx {
+  color: #7d0ea9;
+}
+
+.type-ice-bg {
+  background: linear-gradient(55.56deg, #aefffb 0%, #8fd4d1 100%);
+  --background: linear-gradient(55.56deg, #aefffb 0%, #8fd4d1 100%);
+}
+
+.type-ice-tx {
+  color: #aefffb;
+}
+
+.type-dragon-bg {
+  background: linear-gradient(55.56deg, #ff9000 0%, #e78300 100%);
+  --background: linear-gradient(55.56deg, #ff9000 0%, #e78300 100%);
+}
+
+.type-dragon-tx {
+  color: #ff9000;
+}
+
+.type-dark-bg {
+  background: linear-gradient(55.56deg, #030303 0%, #000000 100%);
+  --background: linear-gradient(55.56deg, #030303 0%, #000000 100%);
+}
+
+.type-dark-tx {
+  color: #030303;
+}
+
+.type-fairy-bg {
+  background: linear-gradient(55.56deg, #ff8de6 0%, #dd79c7 100%);
+  --background: linear-gradient(55.56deg, #ff8de6 0%, #dd79c7 100%);
+}
+
+.type-fairy-tx {
+  color: #ff8de6;
+}
+
+.type-unknown-bg {
+  background: linear-gradient(55.56deg, #535353 0%, #383838 100%);
+  --background: linear-gradient(55.56deg, #535353 0%, #383838 100%);
+}
+
+.type-unknown-tx {
+  color: #535353;
+}
+
+.type-shadow-bg {
+  background: linear-gradient(55.56deg, #d1d0d1 0%, #b9b8b9 100%);
+  --background: linear-gradient(55.56deg, #d1d0d1 0%, #b9b8b9 100%);
+}
+
+.type-shadow-tx {
+  color: #d1d0d1;
+}
+
+/* progress color */
+.type-outher-pg {
+  --progress-background: #263c66;
+}
+
+.type-normal-pg {
+  --progress-background: linear-gradient(55.56deg, #fc7cff 0%, #fa5afd 100%);
+}
+
+.type-fighting-pg {
+  --progress-background: linear-gradient(55.56deg, #005cfe 0%, #0355e2 100%);
+}
+
+.type-flying-pg {
+  --progress-background: linear-gradient(55.56deg, #507dfc 0%, #2760fc 100%);
+}
+
+.type-poison-pg {
+  --progress-background: linear-gradient(55.56deg, #b622b6 0%, #861986 100%);
+}
+
+.type-ground-pg {
+  --progress-background: linear-gradient(55.56deg, #553636 0%, #442727 100%);
+}
+
+.type-rock-pg {
+  --progress-background: linear-gradient(55.56deg, #e6880f 0%, #cc790d 100%);
+}
+
+.type-bug-pg {
+  --progress-background: linear-gradient(55.56deg, #ffb324 0%, rgb(158, 158, 2) 100%);
+}
+
+.type-ghost-pg {
+  --progress-background: linear-gradient(55.56deg, #02947b 0%, #027562 100%);
+}
+
+.type-steel-pg {
+  --progress-background: linear-gradient(55.56deg, #c4c4c4 0%, #a5a5a5 100%);
+}
+
+.type-fire-pg {
+  --progress-background: linear-gradient(55.56deg, #ff0100 0%, #e90202 100%);
+}
+
+.type-water-pg {
+  --progress-background: linear-gradient(55.56deg, #71a1f5 0%, #5579b8 100%);
+}
+
+.type-grass-pg {
+  --progress-background: linear-gradient(55.56deg, #02947b 0%, #027562 100%);
+}
+
+.type-electric-pg {
+  --progress-background: linear-gradient(55.56deg, #9b9b47 0%, #797937 100%);
+}
+
+.type-psychic-pg {
+  --progress-background: linear-gradient(55.56deg, #7d0ea9 0%, #670c8b 100%);
+}
+
+.type-ice-pg {
+  --progress-background: linear-gradient(55.56deg, #aefffb 0%, #8fd4d1 100%);
+}
+
+.type-dragon-pg {
+  --progress-background: linear-gradient(55.56deg, #ff9000 0%, #e78300 100%);
+}
+
+.type-dark-pg {
+  --progress-background: linear-gradient(55.56deg, #030303 0%, #000000 100%);
+}
+
+.type-fairy-pg {
+  --progress-background: linear-gradient(55.56deg, #ff8de6 0%, #dd79c7 100%);
+}
+
+.type-unknown-pg {
+  --progress-background: linear-gradient(55.56deg, #535353 0%, #383838 100%);
+}
+
+.type-shadow-pg {
+  --progress-background: linear-gradient(55.56deg, #d1d0d1 0%, #b9b8b9 100%);
+}
