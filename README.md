@@ -38,4 +38,10 @@ Pensei em realizar algo simples, fácil manutenção porém que tivesse um certa
 
 Foi realizado uma abordagem simples, porém organizada, onde agrupo todas as informações necessárias e realizo a transmitação de dados entre páginas para evitar requisições desnecessárias, sempre pensando no lado de quem for realizar a futuras manutenções nesta aplicação, então abordei um código fácil que até um junior consegueria realizar certas manutenções.
 
-Tempo gasto para criação da aplicação: 10 Horas.
+
+## Screenshots
+![Tela Principal](https://uploaddeimagens.com.br/images/003/989/762/full/localhost_8100_home%28iPhone_X%29.png?1661098156)
+![Tela Detalhes](https://uploaddeimagens.com.br/images/003/989/765/full/localhost_8100_%28iPhone_X%29_%284%29.png?1661098227)
+![Tela tipos](https://uploaddeimagens.com.br/images/003/989/767/full/localhost_8100_%28iPhone_X%29_%285%29.png?1661098296)
+![Tela listagem tipos](https://uploaddeimagens.com.br/images/003/989/768/full/localhost_8100_%28iPhone_X%29_%286%29.png?1661098339)
+
