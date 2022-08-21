@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +24,44 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+/* External font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+// set external font
+*,
+body {
+    font-family: "Montserrat", sans-serif !important;
+}
+
+// force center
+
+.center {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//Toast Collor Ionic
+.toast-success {
+    --background: #04b381;
+    --color: #fff;
+    --button-color: #fff;
+    --border-radius: 8px;
+}
+
+.toast-error {
+    --background: #fe1e52;
+    --color: #fff;
+    --button-color: #fff;
+    --border-radius: 8px;
+}
+
+.toast-alert {
+    --background: #ff921f;
+    --color: #fff;
+    --button-color: #fff;
+    --border-radius: 8px;
+}

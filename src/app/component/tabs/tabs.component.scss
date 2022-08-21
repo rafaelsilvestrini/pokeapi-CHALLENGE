@@ -1,0 +1,27 @@
+.content-tabs {
+    background: transparent;
+    margin-top: -5px;
+    .tabs {
+        background: #2a5ffa;
+        border-radius: 9px;
+        width: 90%;
+        height: 45px;
+    }
+
+    ion-grid {
+        ion-row {
+            ion-col {
+                .icon {
+                    font-size: 26px;
+                    color: #ffcd01;
+                }
+                .title-menu {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 12px;
+                    color: #ffcd01;
+                }
+            }
+        }
+    }
+}

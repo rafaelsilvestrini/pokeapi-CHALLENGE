@@ -1,0 +1,98 @@
+<ion-content class="type-{{url.name}}-bg">
+  <div class="ion-margin-horizontal header">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="2">
+          <ion-icon name="arrow-back-outline" routerLink="/type-poke" routerDirection="back"></ion-icon>
+        </ion-col>
+        <ion-col size="10">
+          <span class="title-header  ion-text-center">{{url.name}}</span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <!-- SearchBar -->
+  <ion-searchbar class="searchbar center" placeholder="Search Pokémon" (ionChange)="filterList($event)" debounce="1000">
+  </ion-searchbar>
+
+  <div *ngIf="listPoke && listPoke.length == 0 && !isSkeleton" class="center not-found"> No pokémon found for this type.</div>
+
+  <div *ngIf="isSkeleton">
+    <ion-grid class="ion-margin-horizontal" style="margin-top: 90px;">
+      <ion-row>
+        <ion-col size="6">
+          <ion-skeleton-text animated style="width: 100%;  height: 140px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+        <ion-col size="6">
+          <ion-skeleton-text animated style="width: 100%;  height: 140px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-skeleton-text animated style="width: 100%;  height: 140px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+        <ion-col size="6">
+          <ion-skeleton-text animated style="width: 100%;  height: 140px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-skeleton-text animated style="width: 100%;  height: 140px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+        <ion-col size="6">
+          <ion-skeleton-text animated style="width: 100%;  height: 140px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-skeleton-text animated style="width: 100%;  height: 140px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+        <ion-col size="6">
+          <ion-skeleton-text animated style="width: 100%;  height: 140px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-skeleton-text animated style="width: 100%;  height: 140px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+        <ion-col size="6">
+          <ion-skeleton-text animated style="width: 100%;  height: 140px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+
+  <div class="result-content-type" *ngIf="listPoke && listPoke.length > 0 && !isSkeleton">
+    <ion-grid class="ion-margin-horizontal" style="margin-top: -20px;">
+      <ion-row>
+        <ion-col *ngFor="let itens of listPoke; let i = index" size="6">
+          <div class="card-list type-default-bg">
+            <div class="center" routerLink="/detail-poke" [state]="{itens:itens}">
+              <img class="img-poke"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{itens?.info?.id}}.png"
+                onerror="this.onerror=null;this.src='https://www.montandominhafesta.com.br/wp-content/uploads/2020/06/fundo_transparente-montando-minha-festa.png';"
+                width="192" height="auto">
+            </div>
+            <div class="center tittle-poke">{{itens?.pokemon?.name}}</div>
+            <div class="center sub-tittle-poke">#{{itens?.info?.id}}</div>
+            <div class="card-list-name center">
+              <ion-icon class="icon-list-name" name="heart" (click)="addFavorite(itens)"></ion-icon>
+              <ion-icon class="icon-list-name" name="information-circle" routerLink="/detail-poke"
+                [state]="{itens:itens}"></ion-icon>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <!-- Infinite Scroll -->
+    <ion-infinite-scroll threshold="0px" (ionInfinite)="infiniteScrool($event)">
+      <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </div>
+
+  <div style="height: 20px;"></div>
+</ion-content>

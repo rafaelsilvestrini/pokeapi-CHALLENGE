@@ -1,0 +1,108 @@
+<ion-content class="type-{{poke?.info?.types[0]?.type?.name}}-bg">
+  <div class="ion-margin-horizontal header">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="2">
+          <ion-icon name="arrow-back-outline" routerLink="/home" routerDirection="back"></ion-icon>
+        </ion-col>
+        <ion-col size="8">
+          <span class="title-header  ion-text-center">{{poke?.name}}</span>
+        </ion-col>
+        <ion-col size="2">
+          <div class="number-header ion-text-end">#{{poke?.info?.id}}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div>
+    <div class="center">
+      <img class="img-poke"
+        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{poke?.info?.id}}.png"
+        onerror="this.onerror=null;this.src='https://www.montandominhafesta.com.br/wp-content/uploads/2020/06/fundo_transparente-montando-minha-festa.png';"
+        width="192" height="auto">
+    </div>
+
+    <div class="content-info-poke ion-margin-horizontal">
+      <div class="center">
+        <ion-row>
+          <ion-col *ngFor="let itens of poke?.info?.types">
+            <div class="bg-type type-{{itens.type.name}}-bg ">
+              <span> {{itens.type.name}}</span>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="title-segment  type-{{poke?.info?.types[0]?.type?.name}}-tx center"> About</div>
+
+      <div class="info-poke-detail">
+        <ion-row>
+          <ion-col size="4" class="ion-text-center">
+            <ion-row class="title center">
+              {{poke?.info?.weight}}
+            </ion-row>
+            <ion-row class="sub-title center">
+              Weight
+            </ion-row>
+          </ion-col>
+          <ion-col size="4">
+            <ion-row class="title center">
+              {{poke?.info?.height}}
+            </ion-row>
+            <ion-row class="sub-title center">
+              Height
+            </ion-row>
+          </ion-col>
+          <ion-col size="4">
+            <ion-row class="title center">
+              {{poke?.info?.moves.length ?? "--"}}
+            </ion-row>
+            <ion-row class="sub-title center">
+              Total Moves
+            </ion-row>
+          </ion-col> 
+        </ion-row>
+
+        <div class="title-segment  type-{{poke?.info?.types[0]?.type?.name}}-tx center"> Experience when defeating</div>
+
+        <ion-row class="message ion-margin-horizontal">
+          When you defeat this pokemon, you gain a value of <strong style="padding-right: 5px;">{{poke?.info?.base_experience}} </strong> experience points.
+        </ion-row>
+      </div>
+
+      <div class="title-segment center type-{{poke?.info?.types[0]?.type?.name}}-tx"> Base Stats</div>
+
+      <div class="base-stats ion-margin-horizontal">
+        <ion-row *ngFor="let stats of poke?.info.stats">
+          <ion-col>
+            <ion-row class="name-stats type-{{poke?.info?.types[0]?.type?.name}}-tx">
+              {{stats?.stat?.name ?? "---"}} <span style="color: #000000; padding-left: 10px;"> ({{stats?.base_stat ??
+                "---"}})</span>
+            </ion-row>
+            <ion-row>
+              <ion-progress-bar class="type-{{poke?.info?.types[0]?.type?.name}}-pg"
+                value="{{(stats?.base_stat/100) ?? 0}}"></ion-progress-bar>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="title-segment center type-{{poke?.info?.types[0]?.type?.name}}-tx"> Abilities</div>
+
+      <div class="ion-margin-horizontal">
+        <div class="center">
+          <ion-row>
+            <ion-col *ngFor="let abilities of poke?.info?.abilities">
+              <div class="bg-type-thow type-{{poke?.info?.types[0]?.type?.name}}-bg ">
+                <span> {{abilities.ability.name}}</span>
+              </div>
+            </ion-col>
+          </ion-row>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div style="height: 20px;"></div>
+</ion-content>

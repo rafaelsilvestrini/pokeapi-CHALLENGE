@@ -1,0 +1,75 @@
+<ion-content>
+  <!-- Header -->
+  <app-header></app-header>
+  <!-- SearchBar -->
+  <ion-searchbar class="searchbar center" placeholder="Search Types Of Pokémons" (ionChange)="filterList($event)"
+    debounce="1000">
+  </ion-searchbar>
+
+  <!-- Card List -->
+  <div *ngIf="listPoke && listPoke.length == 0 && !isSkeleton" class="center not-found"> No results</div>
+
+  <!-- Skeleton -->
+  <div *ngIf="isSkeleton">
+    <div class="ion-margin-horizontal segment-content">{{titleSegment}}</div>
+
+    <ion-grid class="ion-margin-horizontal" style="margin-top: -20px;">
+      <ion-row>
+        <ion-col size="12">
+          <ion-skeleton-text animated style="width: 100%;  height: 50px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+        <ion-col size="12">
+          <ion-skeleton-text animated style="width: 100%;  height: 50px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+        <ion-col size="12">
+          <ion-skeleton-text animated style="width: 100%;  height: 50px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+        <ion-col size="12">
+          <ion-skeleton-text animated style="width: 100%;  height: 50px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+        <ion-col size="12">
+          <ion-skeleton-text animated style="width: 100%;  height: 50px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+        <ion-col size="12">
+          <ion-skeleton-text animated style="width: 100%;  height: 50px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+        <ion-col size="12">
+          <ion-skeleton-text animated style="width: 100%;  height: 50px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+        <ion-col size="12">
+          <ion-skeleton-text animated style="width: 100%;  height: 50px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+        <ion-col size="12">
+          <ion-skeleton-text animated style="width: 100%;  height: 50px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+        <ion-col size="12">
+          <ion-skeleton-text animated style="width: 100%;  height: 50px;  border-radius: 20px;"></ion-skeleton-text>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <!-- content -->
+  <div *ngIf="listPoke && listPoke.length > 0 && !isSkeleton">
+    <div class="ion-margin-horizontal segment-content">{{titleSegment}}</div>
+    <ion-grid class="ion-margin-horizontal" style="margin-top: -20px;">
+      <ion-row>
+        <ion-col *ngFor="let itens of listPoke; let i = index" size="12">
+          <div class="bg-type-poke type-{{itens?.name}}-bg" routerLink="/detail-type-of-poke" [state]="{itens:itens}">
+            <div class="center">{{itens?.name}}</div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <!-- Infinite Scroll -->
+  <ion-infinite-scroll threshold="0px" (ionInfinite)="infiniteScrool($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
+
+<ion-footer style="padding:10px; background-color: transparent;">
+  <!-- Tabs -->
+  <app-tabs></app-tabs>
+</ion-footer>
