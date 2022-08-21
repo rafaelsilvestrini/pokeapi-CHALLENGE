@@ -38,3 +38,4 @@ Pensei em realizar algo simples, fácil manutenção porém que tivesse um certa
 
 Foi realizado uma abordagem simples, porém organizada, onde agrupo todas as informações necessárias e realizo a transmitação de dados entre páginas para evitar requisições desnecessárias, sempre pensando no lado de quem for realizar a futuras manutenções nesta aplicação, então abordei um código fácil que até um junior consegueria realizar certas manutenções.
 
+Tempo gasto para criação da aplicação: 10 Horas.
