@@ -45,7 +45,6 @@ export class FavoritePage {
       this.listPoke.push(pushInfinite[i]);
     }
     $event.target.complete();
-    console.log(this.listPoke)
     let keysss = Object.keys(list).length
   }
 

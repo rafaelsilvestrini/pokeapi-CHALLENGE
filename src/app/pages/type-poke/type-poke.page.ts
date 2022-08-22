@@ -33,7 +33,6 @@ export class TypePokePage implements OnInit {
     this.utils.pokeApiService.getTypePoke()
       .then((data: any) => {
         this.listPokeBackup = data?.results
-        console.log(this.listPokeBackup)
         this.listPoke = this.listPokeBackup.slice(0,10)
       }).catch((err: any) => {
         console.log(err)
@@ -54,7 +53,6 @@ export class TypePokePage implements OnInit {
       this.listPoke.push(pushInfinite[i]);
     }
     $event.target.complete();
-    console.log(this.listPoke)
     let keysss = Object.keys(list).length
   }
 

@@ -36,7 +36,6 @@ export class DetailTypeOfPokePage implements OnInit {
     await this.utils.loadingService.presentLoading()
     this.utils.pokeApiService.getPokemonURL(url)
       .then((data: any) => {
-        console.log(data.pokemon)
         this.listPokeBackup = data?.pokemon
         this.createListPoekomInfo()
       }).catch((err: any) => {
@@ -65,7 +64,6 @@ export class DetailTypeOfPokePage implements OnInit {
       var result = this.onPokeURL(this.listPokeBackup[index]['pokemon'].url, index)
       this.listPokeBackup[index].name = this.listPokeBackup[index]['pokemon'].name;
     }
-    console.log(this.listPokeBackup)
     this.listPoke = this.listPokeBackup.slice(0, 10)
 
   }
@@ -79,7 +77,6 @@ export class DetailTypeOfPokePage implements OnInit {
       this.listPoke.push(pushInfinite[i]);
     }
     $event.target.complete();
-    console.log(this.listPoke)
     let keysss = Object.keys(list).length
   }
 
@@ -130,7 +127,6 @@ export class DetailTypeOfPokePage implements OnInit {
     if (checkFilter && checkFilter.length > 0) return this.utils.toastService.presentToast("This pokemon is already in your favorites.", "toast-error")
     if (storage) {
       var data: any[] = storage.concat(dataFavorite)
-      console.log(data)
       localStorage.setItem("favoritePokemons", JSON.stringify(data))
       this.postWebHook(dataFavorite)
       return this.utils.toastService.presentToast(`Pokémon ${dataFavorite?.name} successfully added to your favorites.`, "toast-success")
@@ -145,7 +141,6 @@ export class DetailTypeOfPokePage implements OnInit {
   postWebHook(data: {}) {
     this.utils.webhookService.webhookPostInfo(data)
       .then((data: any) => {
-        console.log(data)
       }).catch((err: any) => {
         console.log(err)
       })

@@ -65,3 +65,13 @@ body {
     --button-color: #fff;
     --border-radius: 8px;
 }
+
+
+/* fixed footer */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+}

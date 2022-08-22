@@ -2,14 +2,15 @@
   <!-- Header -->
   <app-header></app-header>
   <!-- SearchBar -->
-  <ion-searchbar class="searchbar center" placeholder="Search Favorite Pokémon" (ionChange)="filterList($event)" debounce="1000">
+  <ion-searchbar class="searchbar center" placeholder="Search Favorite Pokémon" (ionChange)="filterList($event)"
+    debounce="1000">
   </ion-searchbar>
 
   <!-- Card List -->
   <div *ngIf="listPoke && listPoke.length == 0 && !isSkeleton" class="center not-found"> No results</div>
 
   <!-- Skeleton -->
-  <div *ngIf="isSkeleton"> 
+  <div *ngIf="isSkeleton">
     <div class="ion-margin-horizontal segment-content">{{titleSegment}}</div>
 
     <ion-grid class="ion-margin-horizontal" style="margin-top: -20px;">
@@ -89,7 +90,7 @@
   </ion-infinite-scroll>
 </ion-content>
 
-<ion-footer style="padding:10px; background-color: transparent;">
+<footer>
   <!-- Tabs -->
   <app-tabs></app-tabs>
-</ion-footer>
+</footer>

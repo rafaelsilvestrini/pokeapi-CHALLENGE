@@ -1,6 +1,6 @@
 {
-	"appId": "io.ionic.starter",
-	"appName": "poke",
+	"appId": "io.pokeChallenge.start",
+	"appName": "Poke - Challenge",
 	"webDir": "www",
 	"bundledWebRuntime": false
 }

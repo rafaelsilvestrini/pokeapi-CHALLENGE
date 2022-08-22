@@ -1,7 +1,7 @@
 
 # CHALLENGE :)
 
-Desenvolver uma aplicação seguindo so requisitos solicitados na documentação.
+Desenvolver uma aplicação seguindo os requisitos solicitados na documentação.
 
 
 

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Poke - Challenge</string>
+    <string name="title_activity_main">Poke - Challenge</string>
+    <string name="package_name">io.pokeChallenge.start</string>
+    <string name="custom_url_scheme">io.pokeChallenge.start</string>
+</resources>
