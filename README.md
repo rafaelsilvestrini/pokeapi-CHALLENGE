@@ -25,8 +25,11 @@ Instale as depedências NPM.
 - Listagens dos pokémons de um tipo específico.
 
 
-## Referência
+## Download APK (ANDROID)
+ - [APK](https://drive.google.com/file/d/1rZBEkf1R8-oLrjp62bWxx3MIW6VociVy/view?usp=sharing)
 
+
+## Referência
  - [PokeAPi](https://pokeapi.co/)
  - [WebHook](https://webhook.site/#!/307f99f8-aae9-44ef-8f93-f80bb3c6222e/78a154fd-6079-48ee-9b40-c23fa2c99d90/1)
  - [WebHook (default request)](https://webhook.site/307f99f8-aae9-44ef-8f93-f80bb3c6222e)
@@ -36,7 +39,7 @@ Instale as depedências NPM.
 
 Pensei em realizar algo simples, fácil manutenção porém que tivesse um certa complexibilidade.
 
-Foi realizado uma abordagem simples, porém organizada, onde agrupo todas as informações necessárias e realizo a transmitação de dados entre páginas para evitar requisições desnecessárias, sempre pensando no lado de quem for realizar a futuras manutenções nesta aplicação, então abordei um código fácil que até um junior consegueria realizar certas manutenções.
+Foi realizado uma abordagem simples, porém organizada, onde agrupo todas as informações necessárias e realizo a transmitação de dados entre páginas para evitar requisições desnecessárias, sempre pensando no lado de quem for realizar as futuras manutenções nesta aplicação, então abordei um código fácil que até um junior consegueria realizar certas manutenções.
 
 
 ## Screenshots
